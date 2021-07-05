@@ -1,0 +1,170 @@
+.header
+{
+    background-image: url('../images/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 800px;
+
+    &_nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    &_nav-mob
+    {
+        display: none;
+    }
+
+    &_show-nav
+    {
+        display: none;
+    }
+
+    ul
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    li
+    {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 50px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    a, i
+    {
+        color: white;
+        font-size: 20px;
+    }
+
+    i:hover
+    {
+        color: $secondary-color;
+    }
+
+    &_search
+    {
+        position: absolute;
+        border: none;
+        right: 50px;
+        z-index: -1;
+        height: 35px;
+        padding-left: 10px;
+        border-radius: 5px;
+        top: -10px;
+        outline: none;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    &_search-active
+    {
+        transition: 0.5s;
+        opacity: 1;
+        z-index: 1;
+    }   
+
+    &_content
+    {
+        float: right;
+        width: 570px;
+        color: white;
+        margin-top: 140px;
+        margin-right: 60px;
+    }
+
+    &_title
+    {
+        font-size: 125px;
+        color: $secondary-color;
+    }
+
+    &_text
+    {
+        margin-bottom: 30px;
+        font-size: 25px;
+        line-height: 32px;
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 991px)
+{
+    .header
+    {
+        background-color: $primary-color;
+        background-image: none;
+        height: auto;
+        padding-bottom: 50px;
+
+        &_nav
+        {
+            ul
+            {
+                display: none;
+            }
+        }
+
+        &_nav-mob
+        {
+            ul
+            {
+                margin: 0;
+                margin-top: 30px;
+            }
+
+            li
+            {
+                display: block;
+                margin-left: 10px;
+                margin-top: 15px;
+            }
+        }
+
+        &_nav-mob-active
+        {
+            display: block;
+        }
+
+        &_search
+        {
+            position: static;
+            opacity: 1;
+        }
+
+        &_show-nav
+        {
+            top: 35px;
+            position: absolute;
+            right: 20px;
+            font-size: 30px !important;
+            display: block;
+        }
+
+        &_content
+        {
+            width: auto;
+            float: none;
+            margin-top: 50px;
+            margin-right: 0;
+        }
+
+        &_title
+        {
+            font-size: 70px;
+        }
+
+        &_text
+        {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+// BASE
+@import './partials/base/typography';
+@import './partials/base/general';
+
+// LAYOUT
+@import './partials/layout/header';
+@import './partials/layout/footer';
+
+// COMPONENT
+@import './partials/component/about';
+@import './partials/component/product';
+@import './partials/component/promo';
+@import './partials/component/subscribe';
