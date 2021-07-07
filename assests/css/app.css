@@ -296,6 +296,7 @@ a:hover {
 @media (max-width: 991px) {
   .about {
     height: 450px;
+    margin-top: 0;
   }
   .about_text {
     font-size: 25px;
